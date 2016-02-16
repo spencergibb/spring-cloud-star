@@ -1,0 +1,10 @@
+*.swp
+.sass-cache
+GNUmakefile
+Gemfile
+Gemfile.lock
+README.md
+development_config.json
+style-guide.html
+scripts
+tests
