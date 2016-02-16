@@ -1,3 +1,14 @@
+# new terminal
+./consul.sh
+
+# new terminal
+. ./vault_env.sh
+
+./vault.sh
+
+# new terminal
+. ./vault_env.sh
+
 vault policy-write appa vault-appA.hcl
 
 vault token-create -policy=appa -id="00000000-0000-0000-0000-000000000001" -orphan
