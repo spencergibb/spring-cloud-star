@@ -1,0 +1,5 @@
+spring:
+  application.name: testConsulVaultApp
+  cloud.vault.token: ${vault.token:${VAULT_TOKEN:00000000-0000-0000-0000-000000000000}}
+
+server.port: 9083
