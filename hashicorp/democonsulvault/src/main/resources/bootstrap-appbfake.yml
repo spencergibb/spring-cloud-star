@@ -1,0 +1,11 @@
+
+spring:
+  application.name: testConsulVaultAppA
+  cloud:
+    vault.token: ${vault.token:${VAULT_TOKEN:00000000-0000-0000-0000-000000000002}}
+    consul:
+      token: ${consul.token:${CONSUL_TOKEN:00000000-0000-0000-0000-000000000000}}
+      config.format: YAML
+
+server.port: 9992
+app.prop: ${appB.secret:}
