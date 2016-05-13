@@ -22,7 +22,7 @@ public class DemoconsulvaultApplication {
 	public Object home() {
 		HashMap<String, String> map = new HashMap<>();
 		map.put("app.prop", env.getProperty("app.prop", "Not Found"));
-		map.put("my.secret", env.getProperty("my.secret", "Not Found"));
+		map.put("shared.secret", env.getProperty("shared.secret", "Not Found"));
 
 		return map;
 	}

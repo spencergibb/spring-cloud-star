@@ -1,3 +1,8 @@
-vault unseal ea51f185d7a6f132ec959a5b897dfdcc11d078b4a732f3f9a7f7d9d36da0179b01
-vault unseal 5808321c9fc7adb7c194d797259116048decb5feb058fe150490b246dfb596e502
-vault unseal cd18698edf5340c6ea9761c8a5ebfd5b5824eef1e31156cac236f8c18001705003
+#!/usr/bin/env bash
+
+keys=($(head -n 3 vault_keys.txt | awk '{print $3}'))
+length=${#keys[@]}
+for ((i = 0; i != length; i++)); do
+   echo "vault unseal ${keys[i]}"
+   vault unseal ${keys[i]}
+done
